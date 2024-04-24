@@ -41,3 +41,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BackGround
+    uniqueID: 1121764367
+    locked: 0
+  - name: Flower
+    uniqueID: 893646213
+    locked: 0
+  - name: Tail
+    uniqueID: 4093164355
+    locked: 0
+  - name: Molto
+    uniqueID: 810031145
+    locked: 0
+  - name: Lead
+    uniqueID: 1253258985
+    locked: 0
+  - name: UI
+    uniqueID: 1505337877
+    locked: 0
