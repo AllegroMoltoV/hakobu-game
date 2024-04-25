@@ -15,7 +15,7 @@ public class ShowAtFailed : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (!hasShowed && master.hasFailed)
         {

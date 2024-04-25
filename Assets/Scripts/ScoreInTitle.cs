@@ -25,10 +25,4 @@ public class ScoreInTitle : MonoBehaviour
         GetComponent<TextMeshProUGUI>().text = "HIGH SCORE: " + score + "\nCLEAR TIME: " + time;
 
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
