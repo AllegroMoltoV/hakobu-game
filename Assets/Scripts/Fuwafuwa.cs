@@ -12,8 +12,8 @@ public class Fuwafuwa : MonoBehaviour
     private Vector3 initialPosition;
 
     private const float X_MAX = 1.0F;
-    private const float COEF_AMP = 30.0f;
-    private const float COEF_FREQ = 5.0f;
+    private const float COEF_AMP = 20.0f;
+    private const float COEF_FREQ = 400.0f;
     private const float COEF_ROTATION = 4000.0f;
 
     // Start is called before the first frame update
@@ -35,7 +35,7 @@ public class Fuwafuwa : MonoBehaviour
                 frequency = master.movementSpeed * COEF_FREQ;
 
                 // Ç”ÇÌÇ”ÇÌÇ≥ÇπÇÈ
-                float yPos = initialPosition.y + amplitude * Mathf.Sin(2 * Mathf.PI * frequency * Time.time);
+                float yPos = initialPosition.y + amplitude * Mathf.Sin(2 * Mathf.PI * frequency);
 
                 // INPUT Ç…âûÇ∂Çƒ X à íuÇïœçXÇ∑ÇÈ
                 float xPos;
