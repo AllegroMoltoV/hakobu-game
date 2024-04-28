@@ -11,6 +11,11 @@ public class Fuwafuwa : MonoBehaviour
     private float frequency; // é¸îgêî
     private Vector3 initialPosition;
 
+    // ÉVÅ[Éìì«Ç›çûÇ›éû 256 ï™ÇÃ 1 ÇÃämó¶Ç≈ Lead ÇøÇ·ÇÒÇ™çÇë¨âªÇ∑ÇÈ
+    private float randomBuff;
+    private uint RANDOM_SCORE = 256;
+    private float BUFF_VALUE = 20.0f;
+
     private const float X_MAX = 1.0F;
     private const float COEF_AMP = 20.0f;
     private const float COEF_FREQ = 400.0f;
@@ -23,6 +28,9 @@ public class Fuwafuwa : MonoBehaviour
         frequency = 0.1f;
         initialPosition = transform.position;
         prevSpeed = master.movementSpeed;
+
+        randomBuff = (Random.Range(0, RANDOM_SCORE) == 0) ? BUFF_VALUE : 1.0f;
+
     }
 
     // Update is called once per frame
@@ -30,9 +38,10 @@ public class Fuwafuwa : MonoBehaviour
     {
         if (!master.hasFailed)
         {
-            if (!master.hasCleared) {
-                amplitude = master.movementSpeed * COEF_AMP;
-                frequency = master.movementSpeed * COEF_FREQ;
+            if (!master.hasCleared)
+            {
+                amplitude = master.movementSpeed * COEF_AMP * randomBuff;
+                frequency = master.movementSpeed * COEF_FREQ * randomBuff;
 
                 // Ç”ÇÌÇ”ÇÌÇ≥ÇπÇÈ
                 float yPos = initialPosition.y + amplitude * Mathf.Sin(2 * Mathf.PI * frequency);
@@ -48,11 +57,13 @@ public class Fuwafuwa : MonoBehaviour
                     else if (Input.mousePosition.x < Screen.width / 2)
                     {
                         xPos = Mathf.Max(transform.position.x - 0.01f, initialPosition.x);
-                    } else
+                    }
+                    else
                     {
                         xPos = transform.position.x;
                     }
-                } else
+                }
+                else
                 {
                     xPos = transform.position.x;
                 }
