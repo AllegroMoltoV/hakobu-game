@@ -11,10 +11,10 @@ public class Fuwafuwa : MonoBehaviour
     private float frequency; // 周波数
     private Vector3 initialPosition;
 
-    // シーン読み込み時 256 分の 1 の確率で Lead ちゃんが高速化する
+    // シーン読み込み時 RANDOM_SCORE 分の 1 の確率で Lead ちゃんが高速化する
     private float randomBuff;
-    private uint RANDOM_SCORE = 256;
-    private float BUFF_VALUE = 20.0f;
+    private const int RANDOM_SCORE = 256;
+    private const float BUFF_VALUE = 20.0f;
 
     private const float X_MAX = 1.0F;
     private const float COEF_AMP = 20.0f;

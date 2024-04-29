@@ -43,43 +43,31 @@ public class GameMaster : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (!hasFailed)
+        if (!HasTerminated())
         {
+            time += Time.deltaTime;
+            scoreFloat += movementSpeed;
+            score = (int)(scoreFloat * 10);
+            rotationSpeed = 0.0f;
+
+            // é∏îsîªíË
             if (molto.transform.position.y < -10)
             {
-                hasFailed = true;
-                Destroy(molto);
-                float highScore = PlayerPrefs.GetInt("High Score");
-                if (score >  highScore)
-                {
-                    PlayerPrefs.SetInt("High Score", score);
-                }
+                TerminateGame(false);
             }
 
-            if (!hasCleared)
+            // ê¨å˜îªíË
+            if (score == SCORE_MAX)
             {
-                time += Time.deltaTime;
-                scoreFloat += movementSpeed;
-                score = (int)(scoreFloat * 10);
-                rotationSpeed = 0.0f;
-
-                if (score == SCORE_MAX)
+                float clearTime = PlayerPrefs.GetFloat("Clear Time");
+                if (clearTime == 0 || time < clearTime)
                 {
-                    float highScore = PlayerPrefs.GetInt("High Score");
-                    if (score > highScore)
-                    {
-                        PlayerPrefs.SetInt("High Score", score);
-                    }
-
-                    float clearTime = PlayerPrefs.GetFloat("Clear Time");
-                    if (clearTime == 0 || time  < clearTime)
-                    {
-                        PlayerPrefs.SetFloat("Clear Time",  time);
-                    }
-
-                    hasCleared = true;
+                    PlayerPrefs.SetFloat("Clear Time", time);
                 }
+
+                TerminateGame(true);
             }
+
 #if UNITY_EDITOR
             if (Input.GetMouseButton(0))
             {
@@ -148,5 +136,29 @@ public class GameMaster : MonoBehaviour
             }
 #endif
         }
+    }
+
+    private void TerminateGame(bool isCleared)
+    {
+        Destroy(this.molto);
+        float highScore = PlayerPrefs.GetInt("High Score");
+        if (this.score > highScore)
+        {
+            PlayerPrefs.SetInt("High Score", this.score);
+        }
+
+        if (isCleared)
+        {
+            this.hasCleared = true;
+        }
+        else
+        {
+            this.hasFailed = true;
+        }
+    }
+
+    private bool HasTerminated()
+    {
+        return hasFailed || hasCleared;
     }
 }
