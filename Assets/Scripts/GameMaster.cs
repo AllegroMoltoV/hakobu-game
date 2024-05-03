@@ -68,7 +68,7 @@ public class GameMaster : MonoBehaviour
                 TerminateGame(true);
             }
 
-#if UNITY_EDITOR
+#if UNITY_EDITOR || UNITY_WEBGL
             if (Input.GetMouseButton(0))
             {
                 isControlled = true;
@@ -103,7 +103,7 @@ public class GameMaster : MonoBehaviour
 
 #endif // UNITY_EDITOR
 
-#if UNITY_EDITOR
+#if UNITY_EDITOR || UNITY_WEBGL
             if (isControlled) {
                 if (Input.mousePosition.x >= Screen.width / 2)
                 {
