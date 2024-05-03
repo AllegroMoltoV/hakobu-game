@@ -19,7 +19,7 @@ public class ShowRightAtEnd : MonoBehaviour
     {
         if (!hasShowed && (master.hasCleared || master.hasFailed))
         {
-            transform.position = new Vector3(Screen.width - Screen.width / 8.0f, transform.position.y, 0);
+            transform.position = new Vector3(Screen.width - Screen.width / 8.0f, Screen.height - Screen.width / 8.0f, 0);
             hasShowed = true;
         }
     }
