@@ -8,7 +8,7 @@ public class ScoreInTitle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        float highScore = PlayerPrefs.GetInt("High Score");
+        int highScore = PlayerPrefs.GetInt("High Score");
         string score = highScore.ToString();
         if (highScore == 0)
         {
@@ -23,6 +23,5 @@ public class ScoreInTitle : MonoBehaviour
         }
 
         GetComponent<TextMeshProUGUI>().text = "HIGH SCORE: " + score + "\nCLEAR TIME: " + time;
-
     }
 }

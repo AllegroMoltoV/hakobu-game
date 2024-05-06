@@ -13,7 +13,6 @@ public class Fuwafuwa : MonoBehaviour
 
     // シーン読み込み時 RANDOM_SCORE 分の 1 の確率で Lead ちゃんが高速化する
     private float randomBuff;
-    private const int RANDOM_SCORE = 256;
     private const float BUFF_VALUE = 20.0f;
 
     private const float X_MAX = 1.0F;
@@ -29,7 +28,7 @@ public class Fuwafuwa : MonoBehaviour
         initialPosition = transform.position;
         prevSpeed = master.movementSpeed;
 
-        randomBuff = (Random.Range(0, RANDOM_SCORE) == 0) ? BUFF_VALUE : 1.0f;
+        randomBuff = master.isCrashed ? BUFF_VALUE : 1.0f;
 
     }
 
@@ -48,13 +47,13 @@ public class Fuwafuwa : MonoBehaviour
 
                 // INPUT に応じて X 位置を変更する
                 float xPos;
-                if (Input.GetMouseButton(0))
+                if (master.isControlled)
                 {
-                    if (Input.mousePosition.x >= Screen.width / 2)
+                    if (master.inputPositionX >= Screen.width / 2)
                     {
                         xPos = Mathf.Min(transform.position.x + master.movementSpeed, X_MAX);
                     }
-                    else if (Input.mousePosition.x < Screen.width / 2)
+                    else if (master.inputPositionX < Screen.width / 2)
                     {
                         xPos = Mathf.Max(transform.position.x - 0.01f, initialPosition.x);
                     }
