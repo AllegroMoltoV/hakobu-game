@@ -16,12 +16,12 @@ PlayerSettings:
   productName: "\u3042\u308C\u3050\u308D\u3082\u308B\u3068\u3092\u306F\u3053\u3076\u30B2\u30FC\u30E0"
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
-  m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
+  m_SplashScreenBackgroundColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 1
   m_SplashScreenAnimation: 1
-  m_SplashScreenLogoStyle: 1
+  m_SplashScreenLogoStyle: 0
   m_SplashScreenDrawMode: 0
   m_SplashScreenBackgroundAnimationZoom: 1
   m_SplashScreenLogoAnimationZoom: 1
@@ -40,7 +40,7 @@ PlayerSettings:
     width: 1
     height: 1
   m_SplashScreenLogos: []
-  m_VirtualRealitySplashScreen: {fileID: 2800000, guid: a63c0090fb2852840ba4ee0bb63db595, type: 3}
+  m_VirtualRealitySplashScreen: {fileID: 2800000, guid: 848c456d846bc914fb0411380fa26d8d, type: 3}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1920
   defaultScreenHeight: 1080
@@ -139,7 +139,7 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 1.1.0
+  bundleVersion: 1.2.0
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -172,7 +172,7 @@ PlayerSettings:
     iPhone: 0
     tvOS: 0
   overrideDefaultApplicationIdentifier: 1
-  AndroidBundleVersionCode: 2024050601
+  AndroidBundleVersionCode: 2024051801
   AndroidMinSdkVersion: 22
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
@@ -265,7 +265,7 @@ PlayerSettings:
   AndroidTargetArchitectures: 3
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
-  androidSplashScreen: {fileID: 2800000, guid: a63c0090fb2852840ba4ee0bb63db595, type: 3}
+  androidSplashScreen: {fileID: 2800000, guid: 848c456d846bc914fb0411380fa26d8d, type: 3}
   AndroidKeystoreName: D:/AllegroMoltoV/allegromoltov.keystore
   AndroidKeyaliasName: release
   AndroidEnableArmv9SecurityFeatures: 0
@@ -290,7 +290,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: a63c0090fb2852840ba4ee0bb63db595, type: 3}
+      m_Icon: {fileID: 2800000, guid: 848c456d846bc914fb0411380fa26d8d, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -299,7 +299,7 @@ PlayerSettings:
     m_Icons:
     - m_Textures:
       - {fileID: 2800000, guid: 70735ec718533f54690dafe700b2d548, type: 3}
-      - {fileID: 2800000, guid: a63c0090fb2852840ba4ee0bb63db595, type: 3}
+      - {fileID: 2800000, guid: 848c456d846bc914fb0411380fa26d8d, type: 3}
       m_Width: 432
       m_Height: 432
       m_Kind: 2
@@ -330,7 +330,7 @@ PlayerSettings:
       m_Kind: 2
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: a63c0090fb2852840ba4ee0bb63db595, type: 3}
+      - {fileID: 2800000, guid: 848c456d846bc914fb0411380fa26d8d, type: 3}
       m_Width: 192
       m_Height: 192
       m_Kind: 1
@@ -366,7 +366,7 @@ PlayerSettings:
       m_Kind: 1
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: a63c0090fb2852840ba4ee0bb63db595, type: 3}
+      - {fileID: 2800000, guid: 848c456d846bc914fb0411380fa26d8d, type: 3}
       m_Width: 192
       m_Height: 192
       m_Kind: 0
@@ -689,8 +689,8 @@ PlayerSettings:
   ps4IncludedModules: []
   ps4attribVROutputEnabled: 0
   monoEnv: 
-  splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid: 70735ec718533f54690dafe700b2d548, type: 3}
-  splashScreenBackgroundSourcePortrait: {fileID: 21300000, guid: a63c0090fb2852840ba4ee0bb63db595, type: 3}
+  splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid: 848c456d846bc914fb0411380fa26d8d, type: 3}
+  splashScreenBackgroundSourcePortrait: {fileID: 21300000, guid: 848c456d846bc914fb0411380fa26d8d, type: 3}
   blurSplashScreenBackground: 1
   spritePackerPolicy: 
   webGLMemorySize: 32
