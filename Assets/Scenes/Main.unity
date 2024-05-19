@@ -2988,8 +2988,8 @@ GameObject:
   - component: {fileID: 2144428254}
   - component: {fileID: 2144428253}
   - component: {fileID: 2144428252}
-  - component: {fileID: 2144428251}
   - component: {fileID: 2144428255}
+  - component: {fileID: 2144428256}
   m_Layer: 5
   m_Name: RETRY
   m_TagString: Untagged
@@ -3017,18 +3017,6 @@ RectTransform:
   m_AnchoredPosition: {x: -1000, y: -200}
   m_SizeDelta: {x: -80, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2144428251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2144428249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f583fb0f0d46874d8d80a4162cef58f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2144428252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3073,8 +3061,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2144428251}
-        m_TargetAssemblyTypeName: StartButton, Assembly-CSharp
+      - m_Target: {fileID: 2144428256}
+        m_TargetAssemblyTypeName: RetryButton, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 1
         m_Arguments:
@@ -3136,6 +3124,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   master: {fileID: 1199715978}
+--- !u!114 &2144428256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144428249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed755052a3a9e14c92954dedcda08b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

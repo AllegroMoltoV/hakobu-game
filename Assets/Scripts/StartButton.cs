@@ -6,10 +6,18 @@ using UnityEngine.SceneManagement;
 public class StartButton : MonoBehaviour
 {
     public const string sceneName = "Main";
+    public DebugCommand debugCommand;
 
     public void LoadScene()
     {
-        // シーンをロードする
-        SceneManager.LoadScene(sceneName);
+        if (debugCommand.counter == 8)
+        {
+            debugCommand.IncrementCounter();
+        }
+        else
+        {
+            // シーンをロードする
+            SceneManager.LoadScene(sceneName);
+        }
     }
 }
